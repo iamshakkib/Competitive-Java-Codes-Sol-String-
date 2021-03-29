@@ -1,0 +1,26 @@
+Codechef Question no. : -  Reverse The Number FLOW007
+
+import java.util.Scanner;
+public class rev{
+
+     public static void reverse(int n)
+     {
+         if(n<10)
+         {
+              System.out.println(n);
+              return;
+         }
+         else
+         {
+            System.out.println(n%10);
+            reverse(n/10);
+         }
+     }
+     
+     public static void main(String []args){
+        Scanner sc = new Scanner(System.in);
+        int n =0;
+        n = sc.nextInt();
+        reverse(n);
+     }
+}

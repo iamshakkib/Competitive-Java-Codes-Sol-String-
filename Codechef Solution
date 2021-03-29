@@ -24,3 +24,28 @@ public class rev{
         reverse(n);
      }
 }
+LeetCode Solution Median of Two Sorted Arrays
+
+class Solution {
+    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+        
+        int a1 = nums1.length;
+        
+        int b1 = nums2.length;
+        
+        int c1 = a1+b1;
+        
+        int []arr = new int[c1];
+        System.arraycopy(nums1 , 0 , arr , 0 ,a1);
+        System.arraycopy(nums2 , 0 , arr , a1 , b1);
+        Arrays.sort(arr);
+        if(c1%2==1)
+        {
+            return(arr[(c1+1)/2-1]);
+        }
+        else
+        {
+            return((double)(arr[c1/2-1]+arr[c1/2])/2);
+        }
+    }
+}

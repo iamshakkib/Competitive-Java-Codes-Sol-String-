@@ -11,7 +11,8 @@ class mrc{
 			FI[i]=-1;
 		}
 		int res = Integer.MAX_VALUE;    //using integer max value constant to compare 
-						//it with the variable res which will have the index of 							            							//repeating chars and we will constantly update it
+						//it with the variable res which will have the index of 		
+						//repeating chars and we will constantly update it
 						//it until and unless we are not getting the 
 						//leftmost repeating character 
 		for(int i=0;i<str.length;i++)

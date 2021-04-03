@@ -1,0 +1,50 @@
+//Return the leftmost character that does not repeats 
+//TestCase1) I/P:- str=geeksforgeeks
+//output:- 5 as f is the leftmost character that does not repeats
+//TestCase2) I/P:-str= = shakkib
+//Output:- s is the leftmost character that does not repeats
+//[dnr(does not repeats)]
+
+
+import java.io.*;
+import java.util.*;
+class dnr{
+	static int dnr(char []str)
+	{
+		int[] FI= new int[256];								
+		for(int i=0;i<256;i++)	        
+		{
+			FI[i]=-1;
+		}
+		int res = Integer.MAX_VALUE;    
+		for(int i=0;i<str.length;i++)
+		{
+			if(FI[str[i]]==-1)	
+			{
+				FI[str[i]]=i;
+			}
+			else
+			FI[str[i]]=-2;
+		}
+		for(int i=0;i<256;i++)
+		{
+			if(FI[i]>=0)
+			{
+				res = Math.min(res,FI[i]);
+			}
+		}
+		return res;
+	}
+	
+	public static void main(String []args)
+	{
+		Scanner sc = new Scanner(System.in);
+		String s = sc.nextLine();	
+		char []str = s.toCharArray();    
+		System.out.println(dnr(str));
+		if(dnr(str)==Integer.MAX_VALUE)
+		{
+			System.out.println("NO LEFTMOST CHARACTER THAT DOESNOT REPEATS");
+		}
+	}
+}

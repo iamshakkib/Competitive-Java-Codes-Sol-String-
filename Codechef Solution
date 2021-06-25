@@ -25,6 +25,7 @@ public class rev{
      }
 }
 LeetCode Solution Median of Two Sorted Arrays
+link to solution post in leetcode :- https://leetcode.com/problems/median-of-two-sorted-arrays/discuss/1132604/Simple-Java-code-42-faster-than-others
 
 class Solution {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
